@@ -23,10 +23,8 @@ Projeto prático para demonstrar ataques de força bruta (FTP, Web form, SMB) us
 - VMs:
   - `KALI-ATTACKER` (Kali Linux)
   - `METASPLOITABLE-ALVO` (Metasploitable2)
-  - Opcional: `DVWA-WEB` (DVWA) se preferir separar o alvo web
+  - Opcional: `DVWA-WEB` (DVWA) 
 - Rede: **Host-only** (ex.: 192.168.56.0/24) ou **Internal Network**
-- Snapshots: crie snapshots iniciais antes dos testes (boa governança de laboratório)
-
 
 ---
 
@@ -139,24 +137,14 @@ Após encontrar credenciais:
 ---
 
 ## 📊 Métricas sugeridas (Adicione no relatório para tom executivo)
-- Tempo até credencial encontrada (ex.: 00:03:24)
+- Tempo até credencial encontrada
 - Número de tentativas por sucesso
 - Taxa de tentativas por segundo
 - Percentual de credenciais quebradas vs testadas
 
-Esses KPIs deixam seu repositório com cara de projeto _data-driven_ — ótimo para recrutadores.
-
 ---
 
-## 🧠 Conclusão & Aprendizados
-Escreva um parágrafo curto com:
-- O que funcionou
-- O que você mudaria (ex.: usar wordlists maiores, usar técnicas de throttling)
-- Próximos passos (ex.: integrar ELK/OSSEC para detecção, praticar detection engineering)
-
----
-
-## 📁 Como reproduzir (passo-a-passo rápido)
+## 📁 Como reproduzir 
 1. Restaurar snapshots das VMs.
 2. Rodar os scans Nmap (salvar outputs).
 3. Executar enumeração SMB (`enum4linux`).
