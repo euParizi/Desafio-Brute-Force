@@ -27,7 +27,6 @@ Projeto prático para demonstrar ataques de força bruta (FTP, Web form, SMB) us
 - Rede: **Host-only** (ex.: 192.168.56.0/24) ou **Internal Network**
 - Snapshots: crie snapshots iniciais antes dos testes (boa governança de laboratório)
 
-**Nomes sugeridos:** KALI-ATTACKER, METASPLOITABLE-ALVO, DVWA-WEB
 
 ---
 
@@ -67,7 +66,6 @@ echo -e "123456\npassword\nadmin\nqwerty\nletmein" > wordlists/small-passwords.t
 for u in admin msfadmin user; do for s in 123 qwe 2025!; do echo "${u}${s}"; done; done > wordlists/custom-dict.txt
 ```
 
-> Dica: para labs, comece com wordlists curtas. Em cenários reais, use wordlists maiores e técnicas de transformação `rules` (Hashcat/Crunch).
 
 ---
 
@@ -116,12 +114,11 @@ Após encontrar credenciais:
 - **SMB:** `smbclient -L //192.168.56.101 -U found_user` e `smbclient //192.168.56.101/share -U user%password`
 - **Web:** acessar DVWA com as credenciais no navegador.
 
-**Evidências:** capture outputs do Medusa (linha `SUCCESS`), logs, e screenshots. Coloque em `/images`.
 
 ---
 
 ## 🧾 Logs e arquivos úteis para o repositório
-- `README.md` (este arquivo)
+- `desafio-brute-force.md` (este arquivo)
 - `wordlists/*`
 - `nmap_full.txt`, `nmap_services.txt`
 - `enum4linux.txt` (SMB enumeration)
@@ -177,17 +174,9 @@ Escreva um parágrafo curto com:
 
 ---
 
-## 🛠 Próximas entregas opcionais
-- Script Bash automatizado que executa Nmap → Enum → Medusa → coleta logs.
-- Wordlists geradas via `crunch` com regras específicas.
-- Relatório em PDF com screenshots e análise executiva.
-
----
-
 ## 🔁 Licença
-Uso pessoal/educacional — cite o autor (você) e mantenha este repositório público para fins de portfólio.
+Uso pessoal/educacional — Gustavo Parizi.
 
 ---
 
-*Gerado para o Desafio DIO — "Entendendo Desafio: Kali + Medusa" — pronto para colar no seu repositório. Boa sorte — vá e quebre coisas só no seu laboratório. 😉*
 
